@@ -3,7 +3,6 @@ services:
     container_name: "backend"
     build: 
       context: ./backend
-      dockerfile: Dockerfile
     ports:
       - "8080:8080"
     depends_on:
@@ -20,9 +19,8 @@ services:
     container_name: "db"
     build: 
       context: ./db
-      dockerfile: Dockerfile
     ports:
-      - 3306:3306
+      - 3307:3306
     volumes:
       - ./db/store:/var/lib/mysql
     networks:
@@ -32,7 +30,6 @@ services:
     container_name: "frontend"
     build: 
       context: ./frontend
-      dockerfile: Dockerfile
     ports:
       - "80:80"
     depends_on:

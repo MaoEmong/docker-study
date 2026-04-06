@@ -1,6 +1,6 @@
 FROM eclipse-temurin:21-jdk
 
-RUN apt-get update && apt-get install -y git
+RUN apt update && apt install -y git
 
 WORKDIR /var/current/app
 
